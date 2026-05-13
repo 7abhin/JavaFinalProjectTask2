@@ -1,6 +1,26 @@
-# First REST API - Spring Boot
+# Product REST API Application
 
-Simple REST API project created using Spring Boot.
+## About Project
+
+This project is a simple REST API created using Spring Boot.
+
+The application performs basic CRUD operations for products and demonstrates how REST endpoints work in Spring framework.
+
+---
+
+## Main Features
+
+The API allows users to:
+
+- Create products
+- View product details
+- View all products
+- Update product information
+- Delete products
+
+The project also includes exception handling and Swagger API testing.
+
+---
 
 ## Technologies
 
@@ -10,36 +30,39 @@ Simple REST API project created using Spring Boot.
 - Spring Data JPA
 - H2 Database
 - Swagger UI
+- Maven
 
 ---
 
-## Features
+## Project Structure
 
-- Create product
-- Get product by id
-- Get all products
-- Update product
-- Delete product
-- Exception handling
-- Swagger documentation
+Project contains:
+
+- Controller layer
+- Service layer
+- Repository layer
+- Domain classes
+- Exception handling classes
 
 ---
 
-## Run Project
+## Running the Application
 
-1. Open project in IntelliJ
-2. Reload Maven
-3. Run `FirstRestApiSpringApplication`
+1. Open the project in IntelliJ IDEA
+2. Reload Maven project
+3. Run the application
 
-Application runs on:
+Server starts on:
 
 ```text
 http://localhost:8080
-````
+```
 
 ---
 
-## Swagger UI
+## Swagger Documentation
+
+Swagger UI:
 
 ```text
 http://localhost:8080/swagger-ui/index.html
@@ -47,23 +70,21 @@ http://localhost:8080/swagger-ui/index.html
 
 ---
 
-## H2 Console
+## H2 Database Console
 
 ```text
 http://localhost:8080/console
 ```
 
+---
 
-
-
-## API Endpoints
+## API Examples
 
 ### Create Product
 
 ```http
 POST /api/v1/products
 ```
----
 
 ### Get Product
 
@@ -71,24 +92,17 @@ POST /api/v1/products
 GET /api/v1/products/1
 ```
 
----
-
 ### Get All Products
 
 ```http
 GET /api/v1/products
 ```
 
----
-
 ### Update Product
 
 ```http
 PUT /api/v1/products/1
 ```
-
-
----
 
 ### Delete Product
 
@@ -97,3 +111,10 @@ DELETE /api/v1/products/1
 ```
 
 ---
+
+## API Testing
+
+The endpoints were tested using:
+
+- Swagger UI
+- Postman
