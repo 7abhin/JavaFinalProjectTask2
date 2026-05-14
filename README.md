@@ -1,24 +1,70 @@
-# Product REST API Application
+# Product REST API
 
-## About Project
+## About The Project
 
-This project is a simple REST API created using Spring Boot.
+This project is a simple REST API application developed using Spring Boot.
 
-The application performs basic CRUD operations for products and demonstrates how REST endpoints work in Spring framework.
+The API performs CRUD operations for products and returns JSON responses.
 
 ---
 
-## Main Features
+## Use Cases
 
-The API allows users to:
+### 1. Create Product
 
-- Create products
-- View product details
-- View all products
-- Update product information
-- Delete products
+A POST request is sent to create a product.
 
-The project also includes exception handling and Swagger API testing.
+```http
+POST /api/v1/products
+```
+
+Request body:
+
+```json
+{
+  "name": "Laptop"
+}
+```
+
+The product is saved and returned with generated id.
+
+---
+
+### 2. Get Product
+
+The user can get product details using product id.
+
+```http
+GET /api/v1/products/1
+```
+
+---
+
+### 3. Update Product
+
+Product information can be updated using PUT request.
+
+```http
+PUT /api/v1/products/1
+```
+
+---
+
+### 4. Delete Product
+
+Product can be removed from database.
+
+```http
+DELETE /api/v1/products/1
+```
+
+---
+
+## Screenshot
+
+Example of API testing :
+
+<img width="1600" height="846" alt="WhatsApp Image 2026-05-14 at 6 19 54 PM" src="https://github.com/user-attachments/assets/0f207ec3-fafe-4afb-9b59-723672d70bf0" />
 
 ---
 
@@ -30,91 +76,12 @@ The project also includes exception handling and Swagger API testing.
 - Spring Data JPA
 - H2 Database
 - Swagger UI
-- Maven
 
 ---
 
-## Project Structure
+## Testing
 
-Project contains:
-
-- Controller layer
-- Service layer
-- Repository layer
-- Domain classes
-- Exception handling classes
-
----
-
-## Running the Application
-
-1. Open the project in IntelliJ IDEA
-2. Reload Maven project
-3. Run the application
-
-Server starts on:
-
-```text
-http://localhost:8080
-```
-
----
-
-## Swagger Documentation
-
-Swagger UI:
-
-```text
-http://localhost:8080/swagger-ui/index.html
-```
-
----
-
-## H2 Database Console
-
-```text
-http://localhost:8080/console
-```
-
----
-
-## API Examples
-
-### Create Product
-
-```http
-POST /api/v1/products
-```
-
-### Get Product
-
-```http
-GET /api/v1/products/1
-```
-
-### Get All Products
-
-```http
-GET /api/v1/products
-```
-
-### Update Product
-
-```http
-PUT /api/v1/products/1
-```
-
-### Delete Product
-
-```http
-DELETE /api/v1/products/1
-```
-
----
-
-## API Testing
-
-The endpoints were tested using:
+The API was tested using:
 
 - Swagger UI
 - Postman
